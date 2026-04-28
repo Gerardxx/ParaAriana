@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Ariana 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- FONDO DE ESTRELLAS -->
+<canvas id="canvas"></canvas>
+<canvas id="confetti-canvas"></canvas>
+
+<!-- PANTALLA INTRO -->
+<div class="intro" id="intro">
+  <div class="intro-lock" id="intro-btn" title="Haz clic para abrir">✦</div>
+  <p class="intro-hint">Haz clic para abrir</p>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <p class="hero-eyebrow" id="ey">Un día muy especial</p>
+    <h1 class="hero-title" id="ht">Feliz<br>Cumpleaños</h1>
+    <p class="hero-name" id="hn">Ariana 🌸</p>
+    <div class="hero-divider" id="hd"></div>
+    <p class="hero-quote" id="hq">
+      "En el universo entero no existe nadie igual a ti<br>
+      y hoy el mundo celebra que existes."
+    </p>
+    <div class="scroll-cta" id="sc" onclick="scrollToCake()">
+      <span>Descubre más</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN TORTA -->
+  <section class="cake-section" id="cake-section">
+    <p class="section-label fade-in-section"> Tu deseo especial</p>
+    <h2 class="section-title fade-in-section">Pide un deseo</h2>
+    <div class="cake-wrapper fade-in-section">
+      <div class="candle-glow" id="candle-glow"></div>
+      <div class="cake" id="cake-emoji" onclick="blowCandles()" title="Haz clic para soplar">🎂</div>
+    </div>
+    <p class="cake-hint fade-in-section">Haz clic en la torta para soplar las velitas 🕯️</p>
+  </section>
+
+  <!-- MENSAJES -->
+  <section class="messages-section fade-in-section" id="messages-section">
+    <div style="text-align:center">
+      <p class="section-label">Con todo mi corazón</p>
+      <h2 class="section-title">Lo que veo de ti</h2>
+    </div>
+    <div class="messages-grid">
+      <div class="msg-card" onclick="openCard(this)">
+        <span class="msg-icon">🌸</span>
+        <h3>Tu sonrisa</h3>
+        <p>Cada vez que sonríes, el mundo entero se detiene un instante para admirarte. Tienes el poder de alegrar cualquier día gris.</p>
+      </div>
+      <div class="msg-card" onclick="openCard(this)">
+        <span class="msg-icon">⭐</span>
+        <h3>Tu luz</h3>
+        <p>Hay personas que iluminan cada espacio que habitan y tú eres una de ellas. Donde tú estás, la luz es diferente.</p>
+      </div>
+      <div class="msg-card" onclick="openCard(this)">
+        <span class="msg-icon">🌙</span>
+        <h3>Tu esencia</h3>
+        <p>No hay palabras suficientes para describir lo especial que eres. Solo sé que el mundo es mejor con tu presencia en él.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORAZONES INTERACTIVOS -->
+  <section class="hearts-section">
+    <p class="section-label fade-in-section">Interactivo</p>
+    <h2 class="section-title fade-in-section">Haz clic en cualquier lugar</h2>
+    <p class="hearts-interactive fade-in-section">Cada clic es un pensamiento especial para ti 💕</p>
+  </section>
+
+  <!-- CARTA FINAL -->
+  <section class="final-section" id="final-section">
+    <div class="final-letter fade-in-section">
+      <p class="opening">Para ti, en tu día especial...</p>
+      <p class="body">
+        No es casualidad que hoy el sol brille un poco más,<br>
+        que los colores sean más vivos<br>
+        y que el aire tenga algo de mágico.<br><br>
+        Es el universo celebrando que naciste.<br>
+        Que existes. Que eres tú.<br><br>
+        Que seas infinitamente feliz hoy<br>
+        y todos los días que vengan.
+      </p>
+      <p class="signature">Con todo el afecto del mundo 🌷</p>
+    </div>
+    <span class="big-heart">❤️‍🩹</span>
+  </section>
+
+  <footer>Hecho con amor · Para alguien muy especial · Gerardx</footer>
+
+</main>
+
+<!-- WISH OVERLAY -->
+<div class="wish-overlay" id="wish-overlay">
+  <div class="wish-card">
+    <div class="gold-ornament">✦ ✦ ✦</div>
+    <h2>¡Tu deseo fue lanzado al universo!</h2>
+    <p>
+      Cierra los ojos un momento y<br>
+      siente ese deseo en tu corazón.<br>
+      El universo ya está escuchando.<br><br>
+      <em>Que todo lo que anhelas se haga realidad. 🥺</em>
+    </p>
+    <button class="wish-close" onclick="closeWish()">Continuar →</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
